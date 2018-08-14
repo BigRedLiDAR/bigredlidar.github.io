@@ -18,7 +18,7 @@
 		 <!-- html5shiv for IE8 and less  -->
 		 <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
-     <title>BigRedLiDAR | Indoor Cloud Point Dataset</title>
+     <title>BigRedLiDAR | Indoor 3D Cloud Point Dataset</title>
 
      <link rel='stylesheet' id='papercite_css-css'  href='styles/paper_cite.css' type='text/css' media='all' />
      <link rel='stylesheet' id='simple_tooltips_style-css'  href='styles/tool_tips.css' type='text/css' media='all' />
@@ -112,7 +112,7 @@
         </div> <!-- brand span3 -->
 
         <div class="container outside">
-          <h2 class="site-description">Semantic Understanding of Indoor Cloud Point</h2>
+          <h2 class="site-description">Semantic Understanding of Indoor 3D Cloud Point</h2>
         </div>
 
         <div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-right">
@@ -120,7 +120,7 @@
           		<div class="navbar-inner" role="navigation">
             		<div class="row-fluid">
 
-              		<h2 class="span7 inside site-description">Semantic Understanding of Indoor Cloud Point</h2>
+              		<h2 class="span7 inside site-description">Semantic Understanding of Indoor 3D Cloud Point</h2>
 
                   <div class="nav-collapse collapse tc-hover-menu-wrapper">
                     <div class="menu-main-menu-container">
@@ -195,7 +195,7 @@
                     </header>
 
                     <div class="entry-content">
-                      <p>The BigRedLiDAR Dataset focuses on semantic understanding of urban street scenes. In the following, we give an overview on the design choices that were made to target the dataset&#8217;s focus.</p>
+                      <p>The BigRedLiDAR Dataset focuses on semantic understanding of indoor scenes. In the following, we give an overview on the design choices that were made to target the dataset&#8217;s focus.</p>
                       <p>&nbsp;</p>
                       <h2 id="features" class="offset">Features</h2>
                       <div class="row-fluid">
@@ -204,31 +204,26 @@
                           <ul>
                             <li>Semantic</li>
                             <li>Instance-wise</li>
-                            <li>Dense pixel annotations</li>
+                            <li>Dense point annotations</li>
                           </ul>
                           <p>Complexity</p>
                           <ul>
-                            <li>30 classes</li>
-                            <li>See <a href="#class-definitions">Class Definitions</a> for a list of all classes and have a look at the applied <a href="#labeling-policy">Labeling Policy</a>.</li>
+                            <li>3 categries of indoor scene</li>
                           </ul>
                           <p>Diversity</p>
                           <ul>
-                            <li>50 cities</li>
-                            <li>Several months (spring, summer, fall)</li>
-                            <li>Daytime</li>
-                            <li>Good/medium weather conditions</li>
-                            <li>Manually selected frames
+                            <li>6 indoor scenes at Cornell University</li>
+                            <li>Automatically labeled frames</li>
+                            <li>Different level of complexity in terms of the number of people</li>
                               <ul>
-                                <li>Large number of dynamic objects</li>
-                                <li>Varying scene layout</li>
-                                <li>Varying background</li>
+                                <li>Simple: 1 to 2 people </li>
+                                <li>Medium: 3 people </li>
+                                <li>Hard: 5 people </li>
                               </ul>
-                            </li>
                           </ul>
                           <p>Volume</p>
                           <ul>
-                            <li>5 000 annotated images with fine annotations (<a href="https://www.cityscapes-dataset.com/examples/#fine-annotations">examples</a>)</li>
-                            <li>20 000 annotated images with coarse annotations (<a href="https://www.cityscapes-dataset.com/examples/#coarse-annotations">examples</a>)</li>
+                            <li>40, 000 annotated point clouds with fine annotations examples</li>
                           </ul>
                           <p>Metadata</p>
                           <ul>
@@ -238,12 +233,8 @@
                             <li>Ego-motion data from vehicle odometry</li>
                             <li>Outside temperature from vehicle sensor</li>
                           </ul>
-                          <p>Benchmark suite and evaluation server</p>
-                          <ul>
-                            <li>Pixel-level semantic labeling</li>
-                            <li>Instance-level semantic labeling</li>
-                          </ul>
                         </div>
+
                         <div class="span4">
                           <h3>Type of annotations</h3>
                           <p>
@@ -251,12 +242,7 @@
                               <img class="alignleft wp-image-77 size-medium" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png" alt="Annotation example" width="100%" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
                             </a>
                           </p>
-                          <h3>Contained cities</h3>
-                          <p>
-                            <a href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2018/05/cityscapesCities.jpg"class="grouped_elements" rel="tc-fancybox-group34">
-                              <img class="alignleft size-medium" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2018/05/cityscapesCities-768x998.jpg" alt="Contained cities" width="100%" />
-                            </a>
-                          </p>
+
                         </div>
                       </div>
                       <p>&nbsp;</p>
@@ -264,94 +250,7 @@
                       <h2 id="labeling-policy" class="offset">Labeling Policy</h2>
                       <p>Labeled foreground objects must never have holes, i.e. if there is some background visible &#8216;through&#8217; some foreground object, it is considered to be part of the foreground. This also applies to regions that are highly mixed with two or more classes: they are labeled with the foreground class. Examples: tree leaves in front of house or sky (everything tree), transparent car windows (everything car).</p>
                       <p>&nbsp;</p>
-                      <h2 id="class-definitions" class="offset">Class Definitions</h2>
-                      <p>Please click on the individual classes for details on their definitions.</p>
 
-                      <table id="tablepress-1" class="tablepress tablepress-id-1">
-                        <thead>
-                          <tr class="row-1 odd">
-                            <th class="column-1">Group</th><th class="column-2">Classes</th>
-                          </tr>
-                        </thead>
-                        <tbody class="row-hover">
-                          <tr class="row-2 even">
-                            <td class="column-1">flat</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Part of ground on which cars usually drive, i.e. all lanes, all directions, all streets. Including the markings on the road. Areas only delimited by markings from the main road (no texture change) are also road, e.g. bicycle lanes, roundabout lanes, or parking spaces. This label does not include curbs.">road</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Part of ground designated for pedestrians or cyclists. Delimited from the road by some obstacle, e.g. curbs or poles (might be small), not only by markings. Often elevated compared to the road. Often located at the sides of a road. This label includes a possibly delimiting curb, traffic islands (the walkable part), or pedestrian zones (where usually cars are not allowed to drive during day-time).">sidewalk</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Parking lots and driveways. Not for regular driving, but rather to park a vehicle. Different texture than road. In ambiguous cases where the driveway is not separated from the sidewalk (e.g. a building entrance), labeled as sidewalk.">parking<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="All kind of rail tracks that are non-drivable by cars, e.g. subway and train rail tracks, while tram rail tracks are usually drivable by cars and therefore part of &lt;em&gt;road&lt;/em&gt;.">rail track<sup>+</sup></span>
-                            </td>
-                          </tr>
-                          <tr class="row-3 odd">
-                            <td class="column-1">human</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="A human that satisfies the following criterion. Assume the human moved a distance of 1m and stopped again. If the human would walk, the label is person, otherwise not. Examples are people walking, standing or sitting on the ground, on a bench, on a chair. This class also includes toddlers, someone pushing a bicycle or standing next to it with both legs on the same side of the bicycle. This class includes anything that is carried by the person, e.g. backpack, but not items touching the ground, e.g. trolleys.">person<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="A human that would use some device to move a distance of 1m. Includes, riders/drivers of bicycle, motorbike, scooter, skateboards, horses, roller-blades, wheel-chairs, road cleaning cars, cars without roof. Note that a visible driver of a car with roof can only be seen through the window. Since holes are not labeled, the human is included in the car label.">rider<sup>*</sup></span>
-                              <br />
-                            </td>
-                          </tr>
-                          <tr class="row-4 even">
-                            <td class="column-1">vehicle</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Car, jeep, SUV, van with continuous body shape, caravan, no other trailers.">car<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Truck, box truck, pickup truck. Including their trailers. Back part / loading area is physically separated from driving compartment.">truck<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Bus for 9+ persons, public transport or long distance transport.">bus<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Vehicle on rails, e.g. tram, train.">on rails<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Motorbike, moped, scooter without the driver (that's a &lt;em&gt;rider&lt;/em&gt;, see above).">motorcycle<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Bicycle without the driver (that's a &lt;em&gt;rider&lt;/em&gt;, see above).">bicycle<sup>*</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Like truck, but back is primarily for living/sleeping. Including caravan trailers.">caravan<sup>*+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Trailers typically pulled by cars. Note that truck trailers are labeled &lt;em&gt;truck&lt;/em&gt;, caravan trailers &lt;em&gt;caravan&lt;/em&gt;, bicycle or horse trailers &lt;em&gt;dynamic&lt;/em&gt;.">trailer<sup>*+</sup></span>
-                            </td>
-                          </tr>
-                          <tr class="row-5 odd">
-                            <td class="column-1">construction</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Building, skyscraper, house, bus stop building, garage, car port. If a building has a glass wall that you can see through, the wall is still building. Includes scaffolding attached to buildings.">building</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Individual standing wall. Not part of a building.">wall</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Fence including any holes.">fence</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="All types of guard rails/crash barriers.">guard rail<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Bridge. Only the bridge. Fences, people or vehicles on top are labeled separately.">bridge<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Tunnel wall and 'the dark'. No vehicles.">tunnel<sup>+</sup></span>
-                            </td>
-                          </tr>
-                          <tr class="row-6 even">
-                            <td class="column-1">object</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Small mainly vertically oriented pole. E.g. sign pole, traffic light poles. If the pole has a horizontal part (often for traffic light poles) this part is also considered pole. If there are things mounted at the pole that are neither &lt;em&gt;traffic light&lt;/em&gt; nor &lt;em&gt;traffic sign&lt;/em&gt; (e.g. street lights) and that have a diameter (in pixels) of at most twice the diameter of the pole, then these things might also be labeled pole. If they are larger, they are labeled &lt;em&gt;static&lt;/em&gt;.">pole</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Multiple poles that are cumbersome to label individually. This label is ok to use, if the gap between two poles has at most as many pixels width as a single pole.">pole group<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Sign installed from the state/city authority, usually for information of the driver/cyclist/pedestrian in an everyday traffic scene, e.g. traffic- signs, parking signs, direction signs - without their poles. No ads/commercial signs. Only the front side of a sign containing the information. The back side is &lt;em&gt;static&lt;/em&gt;. Note that commercial signs attached to buildings become &lt;em&gt;building&lt;/em&gt;, attached to poles or standing on their own become &lt;em&gt;static&lt;/em&gt;.">traffic sign</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="The traffic light box without its poles.">traffic light</span>
-                            </td>
-                          </tr>
-                          <tr class="row-7 odd">
-                            <td class="column-1">nature</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Tree, hedge, all kinds of vertical vegetation. Plants attached to buildings are usually not annotated separately and labeled &lt;em&gt;building&lt;/em&gt; as well. If growing at the side of a wall or building, marked as vegetation if it covers a substantial part of the surface (more than 20%).">vegetation</span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Grass, all kinds of horizontal vegetation, soil or sand. These areas are not meant to be driven on. This label includes a possibly delimiting curb. Single grass stalks do not need to be annotated and get the label of the region they are growing on.">terrain</span>
-                            </td>
-                          </tr>
-                          <tr class="row-8 even">
-                            <td class="column-1">sky</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="Open sky, without leaves of tree. Includes thin electrical wires in front of the sky.">sky</span>
-                            </td>
-                          </tr>
-                          <tr class="row-9 odd">
-                            <td class="column-1">void</td>
-                            <td class="column-2">
-                              <span class="tooltips " style="color:#B31B1B;" title="All other forms of horizontal ground-level structures that do not match any of the above. For example areas that cars and pedestrians share all-day, roundabouts that are flat but delimited from the road by a curb, elevated parts of traffic islands, water. Void label for &lt;em&gt;flat&lt;/em&gt; areas.">ground<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Things that might not be there anymore the next day/hour/minute: Movable trash bin, buggy, bag, wheelchair, animal.">dynamic<sup>+</sup></span> &middot;
-                              <span class="tooltips " style="color:#B31B1B;" title="Clutter in the background that is not distinguishable. Objects that do not match any of the above. For example, visible parts of the ego vehicle, mountains, street lights, back side of signs. Also rather small regions in the image that are some of the classes above, but that are cumbersome to label precisely might be annotated &lt;em&gt;static&lt;/em&gt;.">static<sup>+</sup></span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <!-- #tablepress-1 from cache -->
-                      <ul class="footnote">
-                        <li>* Single instance annotations are available. However, if the boundary between such instances cannot be clearly seen, the whole crowd/group is labeled together and annotated as group, e.g. car group.</li>
-                        <li>+ This label is not included in any evaluation and treated as void (or in the case of <em>license plate</em> as the vehicle mounted on).</li>
-                      </ul>
 
                     </div>
 
