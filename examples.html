@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+
+  <head>
+	   <meta charset="UTF-8" />
+		 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		 <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+		 <!-- html5shiv for IE8 and less  -->
+		 <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+     <title>BigRedLiDAR | Indoor Cloud Point Dataset</title>
+
+     <link rel='stylesheet' id='papercite_css-css'  href='styles/paper_cite.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='simple_tooltips_style-css'  href='styles/tool_tips.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='collapseomatic-css-css'  href='styles/collapse_omatic.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='local-fonts-css'  href='styles/local_font.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='tablepress-columnfilterwidgets-css-css'  href='styles/column_filter.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='tablepress-default-css'  href='styles/table_press.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='datatables-row-details-css'  href='styles/data_table.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='circles-gallery-plugin-styles-css'  href='styles/circles_gallery.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-fa-css'  href='styles/fa.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-common-css'  href='styles/common.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-skin-css'  href='styles/skin.css' type='text/css' media='all' />
+
+     <style id='customizr-skin-inline-css' type='text/css'>
+        .site-title,.site-description,h1,h2,h3,.tc-dropcap {
+          font-family : 'Georgia','Georgia','serif';
+          font-weight : inherit;
+          }
+
+        body,.navbar .nav>li>a {
+          font-family : 'Verdana','Geneva','sans-serif';
+          font-weight : inherit;
+          }
+
+        body,.navbar .nav>li>a {
+          font-size : 18px;
+          line-height : 1.6em;
+          }
+
+        table { border-collapse: separate; }
+
+        body table { border-collapse: collapse; }
+
+        .social-links .social-icon:before { content: none }
+
+        .sticky-enabled .tc-shrink-on .site-logo img {
+          height:30px!important;
+          width:auto!important
+          }
+
+        .sticky-enabled .tc-shrink-on .brand .site-title {
+          font-size:0.6em;
+          opacity:0.8;
+          line-height:1.2em
+          }
+      </style>
+
+      <link rel='stylesheet' id='customizr-style-css'  href='styles/style.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='fancyboxcss-css'  href='styles/fancy_box.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tablepress-datatables-buttons-css'  href='styles/table_buttons.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tablepress-responsive-tables-css'  href='styles/table.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='video-js-css'  href='styles/video.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='video-js-kg-skin-css'  href='styles/video_skin.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='dashicons-css'  href='styles/dash_icons.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='kgvid_video_styles-css'  href='styles/video_styles.css' type='text/css' media='all' />
+      <!--[if !IE]><!-->
+        <link rel='stylesheet' id='tablepress-responsive-tables-flip-css'  href='styles/table_flip.css' type='text/css' media='all' />
+      <!--<![endif]-->
+
+      <script type='text/javascript' src='scripts/jquery_js.js'></script>
+      <script type='text/javascript' src='scripts/jquery_migrate.js'></script>
+      <script type='text/javascript' src='scripts/paper_cite.js'></script>
+      <script type='text/javascript' src='scripts/circle_gallery.js'></script>
+      <script type='text/javascript' src='scripts/modernizr.js'></script>
+      <script type='text/javascript' src='scripts/fancy_box.js'></script>
+
+      <!--<script type='text/javascript'>
+      /* <![CDATA[ */
+        var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"1","SliderName":"examples","SliderDelay":"3210","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"easeOutExpo","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"1","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"1","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"https:\/\/www.cityscapes-dataset.com\/wordpress\/wp-admin\/admin-ajax.php","ajaxUrl":"https:\/\/www.cityscapes-dataset.com\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"4eeafeaa3b"},"isDevMode":"","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"https:\/\/www.cityscapes-dataset.com\/wordpress\/wp-admin\/admin-ajax.php"}}};
+      /* ]]> */
+    </script>-->
+
+      <script type='text/javascript' src='scripts/tc_scripts.js'></script>
+      <meta property="og:url" content="https://www.cityscapes-dataset.com/examples/" />
+      <meta property="og:title" content="Examples" />
+      <meta property="og:description" content="Examples providing further insights into the type and quality of annotations, as well as the metadata that comes with the Cityscapes dataset." />
+      <meta property="og:video" content="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/gpsMotionMeta.mp4" />
+      <meta property="og:video:secure_url" content="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/gpsMotionMeta.mp4" />
+      <meta property="og:video:type" content="video/mp4" />
+      <meta property="og:video:width" content="640" />
+      <meta property="og:video:height" content="306" />
+      <meta property="og:image" content="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/gpsMotionMeta_thumb.jpg" />
+      <meta property="og:image:width" content="640" />
+      <meta property="og:image:height" content="306" />
+      <meta name="generator" content="WordPress 4.9.6" />
+      <link rel="canonical" href="https://bigredlidar.github.io/" />
+      <link rel='shortlink' href='https://bigredlidar.github.io/' />
+      <link rel="icon" href="images/bigred.png" sizes="192x192" />
+      <link rel="apple-touch-icon-precomposed" href="images/bigred.png" />
+	</head>
+
+	<body class="home page-template page-template-custom-page page-template-custom-page-php page page-id-27 tc-fade-hover-links tc-no-sidebar tc-center-images skin-blue tc-sticky-header sticky-disabled tc-transparent-on-scroll no-navbar tc-regular-menu" >
+
+    <div id="tc-page-wrap" class="">
+
+  	   	<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on  tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile" role="banner">
+
+        <div class="brand span3 pull-left">
+          <a class="site-logo" href="https://bigredlidar.github.io/" title="">
+          <img src="images/lidar_logo.png" alt="Back Home" width="1999" height="369" style="max-width:250px;max-height:100px" data-no-retina class=" attachment-289"/>
+          </a>
+        </div> <!-- brand span3 -->
+
+        <div class="container outside">
+          <h2 class="site-description">Semantic Understanding of Indoor Cloud Point</h2>
+        </div>
+
+        <div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-right">
+        	<div class="navbar resp">
+          		<div class="navbar-inner" role="navigation">
+            		<div class="row-fluid">
+
+              		<h2 class="span7 inside site-description">Semantic Understanding of Indoor Cloud Point</h2>
+
+                  <div class="nav-collapse collapse tc-hover-menu-wrapper">
+                    <div class="menu-main-menu-container">
+                      <ul id="menu-main-menu-2" class="nav tc-hover-menu">
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-788">
+                          <a href="overview.html">Overview</a>
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-57">
+                          <a href="examples.html">Examples</a>
+                          <!--<ul class="dropdown-menu">
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119">
+                               <a href="https://www.cityscapes-dataset.com/examples/#fine-annotations">Fine Annotations</a></li>
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-346"><a href="https://www.cityscapes-dataset.com/examples/#coarse-annotations">Coarse Annotations</a></li>
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-682"><a href="https://www.cityscapes-dataset.com/examples/#videos">Videos</a></li>
+                          </ul>-->
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479">
+                          <a href="download.html">Download</a>
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131">
+                          <a href="contact.html">Contact</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-toggle-nav pull-right">
+                    <button type="button" class="btn menu-btn" data-toggle="collapse" data-target=".nav-collapse" title="Open the menu" aria-label="Open the menu">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+
+                </div><!-- /.row-fluid -->
+          		</div><!-- /.navbar-inner -->
+        	</div><!-- /.navbar resp -->
+      	</div><!-- /.navbar-wrapper -->
+    	  </header>
+
+<!--   ############################### HEADER END ###################################################################   -->
+
+        <div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div>
+        <div id="main-wrapper" class="container">
+
+          <div class="tc-hot-crumble container" role="navigation">
+            <div class="row">
+              <div class="span12">
+                <div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+                  <span class="trail-begin">
+                    <a href="index.html" title="BigRedLiDAR Dataset" rel="home" class="trail-begin">Home</a>
+                  </span>
+                  <span class="sep">&raquo;</span>
+                  <span class="trail-end">Examples</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container" role="main">
+            <div class="row column-content-wrapper">
+              <div id="content" class="span12 article-container tc-gallery-style">
+                <article id="page-56" class="row-fluid post-56 page type-page status-publish has-post-thumbnail">
+                  <header class="entry-header">
+                    <h1 class="entry-title ">Examples</h1>
+                    <hr class="featurette-divider __before_content">
+                  </header>
+
+                  <div class="entry-content">
+                    <h2 id="fine-annotations" class="offset">Fine annotations</h2>
+                    <p>Below are examples of our high quality dense pixel annotations that we provide for a volume of 5 000 images. Overlayed colors encode semantic classes (see <a href="https://www.cityscapes-dataset.com/dataset-overview/#class-definitions">class definitions</a>). Note that single instances of traffic participants are annotated individually.</p>
+
+                    <style type='text/css'>
+                      #gallery-1 {
+                        margin: auto;
+                      }
+                      #gallery-1 .gallery-item {
+                        float: left;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 25%;
+                      }
+                      #gallery-1 img {
+                        border: 2px solid #cfcfcf;
+                      }
+                      #gallery-1 .gallery-caption {
+                        margin-left: 0;
+                      }
+                    </style>
+
+                    <div id='gallery-1' class='gallery galleryid-56 gallery-columns-4 gallery-size-medium'>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/stuttgart03.png" title="stuttgart03">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/stuttgart03-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Stuttgart" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/stuttgart03-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/stuttgart03-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px"/>
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-81'>Stuttgart</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/zuerich00.png" title="zuerich00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/zuerich00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Zurich" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/zuerich00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/zuerich00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-85'>Zurich</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/ulm00.png" title="ulm00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/ulm00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Ulm" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/ulm00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/ulm00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px"/>
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-84'>Ulm</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/tuebingen00.png" title="tuebingen00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/tuebingen00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Tübingen" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/tuebingen00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/tuebingen00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-83'>Tübingen</dd>
+                      </dl>
+                      <br style="clear: both" />
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00.png" title="muenster00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Münster" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-77'>Münster</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/koeln00.png" title="koeln00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/koeln00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Cologne" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/koeln00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/koeln00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-76'>Cologne</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bonn00.png" title="bonn00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bonn00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Bonn" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bonn00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bonn00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-74'>Bonn</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erfurt00.png" title="erfurt00">
+                            <img width="300" height="149" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erfurt00-300x149.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Erfurt" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erfurt00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erfurt00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-75'>Erfurt</dd>
+                      </dl>
+                      <br style="clear: both" />
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/jena00.png" title="jena00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/jena00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Jena 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/jena00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/jena00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-312'>Jena</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dusseldorf00.png" title="dusseldorf00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dusseldorf00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Düsseldorf 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dusseldorf00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dusseldorf00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-311'>Düsseldorf</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/lindau00.png" title="lindau00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/lindau00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Lindau 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/lindau00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/lindau00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-314'>Lindau</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/weimar00.png" title="weimar00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/weimar00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Weimar 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/weimar00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/weimar00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-1-313'>Weimar</dd>
+                      </dl>
+                      <br style="clear: both" />
+                    </div>
+
+                    <h2 id="coarse-annotations" class="offset">Coarse annotations</h2>
+                    <p>In addition to the fine annotations, we provide coarser polygonal annotations for a set of 20 000 images in collaboration with <a href="http://pallas-ludens.com/" target="_blank">Pallas Ludens</a>. Again, overlayed colors encode the semantic classes (see <a href="https://www.cityscapes-dataset.com/dataset-overview/#class-definitions">class definitions</a>). Note that we do not aim to annotated single instances, however, we marked polygons covering individual objects as such.</p>
+
+                    <style type='text/css'>
+                      #gallery-2 {
+                        margin: auto;
+                      }
+                      #gallery-2 .gallery-item {
+                        float: left;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 25%;
+                      }
+                      #gallery-2 img {
+                        border: 2px solid #cfcfcf;
+                      }
+                      #gallery-2 .gallery-caption {
+                        margin-left: 0;
+                      }
+                      /* see gallery_shortcode() in wp-includes/media.php */
+                    </style>
+
+                    <div id='gallery-2' class='gallery galleryid-56 gallery-columns-4 gallery-size-medium'>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken00.png" title="saarbrucken00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Saarbrücken 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-327'>Saarbrücken</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken01.png" title="saarbrucken01">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken01-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Saarbrücken 2" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken01-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/saarbrucken01-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-320'>Saarbrücken</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg01.png" title="nuremberg01">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg01-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Nuremberg 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg01-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg01-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-326'>Nuremberg</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg00.png" title="nuremberg00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Nuremberg 2" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/nuremberg00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-325'>Nuremberg</dd>
+                      </dl>
+                      <br style="clear: both" />
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erlangen00.png" title="erlangen00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erlangen00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Erlangen 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erlangen00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/erlangen00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-323'>Erlangen</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bamberg00.png" title="bamberg00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bamberg00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Bamberg 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bamberg00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/bamberg00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-321'>Bamberg</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund00.png" title="dortmund00">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund00-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Dortmund 1" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund00-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund00-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-322'>Dortmund</dd>
+                      </dl>
+                      <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                          <a class="grouped_elements" rel="tc-fancybox-group" href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund01.png" title="dortmund01">
+                            <img width="300" height="150" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund01-300x150.png" class="attachment-medium size-medium" alt="Cityscapes Dataset: Example Dortmund 2" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund01-300x150.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/dortmund01-1024x512.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                          </a>
+                        </dt>
+                        <dd class='wp-caption-text gallery-caption' id='gallery-2-331'>Dortmund</dd>
+                      </dl>
+                      <br style="clear: both" />
+                    </div>
+
+                    <p>&nbsp;</p>
+
+                    <h2 id="videos" class="offset">Videos</h2>
+                    <p>The videos below provide further examples of the Cityscapes Dataset. The first video contains roughly 1000 images with high quality annotations overlayed. The second video visualizes the precomputed depth maps using the corresponding right stereo views. The last video is extracted from a long video recording and visualizes the GPS positions as part of the dataset&#8217;s metadata. Note that the images are blurred for privacy reasons.</p>
+                    <div class="kgvid_gallerywrapper kgvid_textalign_left" id="kgvid_gallery_0" data-query_atts="{&quot;gallery_orderby &quot;:&quot;menu_order ID&quot;,&quot;gallery_order&quot;:&quot;ASC&quot;,&quot;gallery_id&quot;:56,&quot;gallery_include&quot;:&quot;&quot;,&quot;gallery_exclude&quot;:&quot;&quot;,&quot;gallery_thumb&quot;:&quot;370&quot;,&quot;view_count&quot;:&quot;false&quot;,&quot;gallery_end&quot;:&quot;&quot;,&quot;gallery_per_page&quot;:&quot;&quot;,&quot;gallery_title&quot;:&quot;true&quot;}">
+                      <div class="kgvid_video_gallery_thumb" onclick="kgvid_SetVideo('kgvid_1')" id="kgvid_video_gallery_thumb_kgvid_1" data-id="kgvid_1" data-width="960" data-height="480" data-meta="1" data-gallery_end="" data-popupcode="&lt;div id=&quot;kgvid_kgvid_1_wrapper&quot; class=&quot;kgvid_wrapper&quot;&gt;&lt;div id=&quot;video_kgvid_1_div&quot; class=&quot;fitvidsignore kgvid_videodiv&quot; data-id=&quot;kgvid_1&quot; itemprop=&quot;video&quot; itemscope itemtype=&quot;https://schema.org/VideoObject&quot;&gt;&lt;meta itemprop=&quot;thumbnailUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/labelExamples_thumb75.jpg&quot; /&gt;&lt;meta itemprop=&quot;embedUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/?attachment_id=672&amp;kgvid_video_embed[enable]=true&quot; /&gt;&lt;meta itemprop=&quot;contentUrl&quot; content=&quot;https://www.youtube.com/embed/KRLi6GthbFA?rel=0&quot; /&gt;&lt;meta itemprop=&quot;name&quot; content=&quot;Fine Annotation Examples&quot; /&gt;&lt;meta itemprop=&quot;description&quot; content=&quot;Roughly 1000 (out of 5000) images with high quality annotations overlayed.&quot; /&gt;&lt;meta itemprop=&quot;uploadDate&quot; content=&quot;2016-02-21T10:34:50+00:00&quot; /&gt;&lt;video id=&quot;video_kgvid_1&quot; autoplay controls preload=&quot;metadata&quot; poster=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/labelExamples_thumb75.jpg&quot; width=&quot;960&quot; height=&quot;480&quot; class=&quot;fitvidsignore video-js kg-video-js-skin&quot;&gt;&lt;source src=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/labelExamples.mp4?id=1&quot; type=&quot;video/mp4&quot; data-res=&quot;512p&quot;&gt;&lt;/video&gt;&lt;/div&gt;&lt;div class=&quot;kgvid_below_video&quot; id=&quot;video_kgvid_1_below&quot;&gt;&lt;div class=&quot;kgvid-caption&quot; id=&quot;video_kgvid_1_caption&quot;&gt;Fine Annotation Examples&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:none;&quot; id=&quot;video_kgvid_1_meta&quot; class=&quot;kgvid_video_meta kgvid_video_meta_hover &quot;&gt;&lt;span class=&#039;kgvid_meta_icons&#039;&gt;&lt;/span&gt;&lt;span id=&#039;video_kgvid_1_title&#039; class=&#039;kgvid_title&#039;&gt;Fine Annotation Examples&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" data-kgvid_video_vars="{&quot;id&quot;:&quot;kgvid_1&quot;,&quot;attachment_id&quot;:672,&quot;player_type&quot;:&quot;Video.js&quot;,&quot;width&quot;:&quot;960&quot;,&quot;height&quot;:&quot;480&quot;,&quot;fullwidth&quot;:&quot;false&quot;,&quot;countable&quot;:true,&quot;count_views&quot;:&quot;quarters&quot;,&quot;start&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pauseothervideos&quot;:&quot;false&quot;,&quot;set_volume&quot;:&quot;1&quot;,&quot;mute&quot;:&quot;false&quot;,&quot;meta&quot;:true,&quot;endofvideooverlay&quot;:&quot;&quot;,&quot;resize&quot;:&quot;true&quot;,&quot;auto_res&quot;:&quot;automatic&quot;,&quot;pixel_ratio&quot;:&quot;true&quot;,&quot;right_click&quot;:&quot;on&quot;,&quot;playback_rate&quot;:&quot;false&quot;,&quot;nativecontrolsfortouch&quot;:&quot;true&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;enable_resolutions_plugin&quot;:false}" " style="max-width:370px">
+                        <video width="320" height="240" controls>
+                          <source src="files/recorder.mkv" type="video/mkv">
+                        </video>
+                        <img src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/labelExamples_thumb75.jpg" alt="Fine Annotation Examples">
+                        <div class="kg-video-js-skin" >
+                          <div class="vjs-big-play-button" style="-webkit-transform: scale(0.62) translateY(-30px); -o-transform: scale(0.62) translateY(-30px); -ms-transform: scale(0.62) translateY(-30px); transform: scale(0.62) translateY(-30px);">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="titlebackground">
+                          <div class="videotitle">Fine Annotation Examples</div>
+                        </div>
+                      </div>
+
+                    <div class="kgvid_video_gallery_thumb" onclick="kgvid_SetVideo('kgvid_2')" id="kgvid_video_gallery_thumb_kgvid_2" data-id="kgvid_2" data-width="960" data-height="563" data-meta="1" data-gallery_end="" data-popupcode="&lt;div id=&quot;kgvid_kgvid_2_wrapper&quot; class=&quot;kgvid_wrapper&quot;&gt;&lt;div id=&quot;video_kgvid_2_div&quot; class=&quot;fitvidsignore kgvid_videodiv&quot; data-id=&quot;kgvid_2&quot; itemprop=&quot;video&quot; itemscope itemtype=&quot;https://schema.org/VideoObject&quot;&gt;&lt;meta itemprop=&quot;thumbnailUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/depthMeta_thumb.jpg&quot; /&gt;&lt;meta itemprop=&quot;embedUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/?attachment_id=674&amp;kgvid_video_embed[enable]=true&quot; /&gt;&lt;meta itemprop=&quot;contentUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/depthMeta.mp4&quot; /&gt;&lt;meta itemprop=&quot;name&quot; content=&quot;Depth Metadata&quot; /&gt;&lt;meta itemprop=&quot;description&quot; content=&quot;Precomputed depth maps using the corresponding right stereo views.&quot; /&gt;&lt;meta itemprop=&quot;uploadDate&quot; content=&quot;2016-02-21T10:41:04+00:00&quot; /&gt;&lt;video id=&quot;video_kgvid_2&quot; autoplay controls preload=&quot;metadata&quot; poster=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/depthMeta_thumb.jpg&quot; width=&quot;960&quot; height=&quot;563&quot; class=&quot;fitvidsignore video-js kg-video-js-skin&quot;&gt;&lt;source src=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/depthMeta.mp4?id=2&quot; type=&quot;video/mp4&quot; data-res=&quot;950p&quot;&gt;&lt;/video&gt;&lt;/div&gt;&lt;div class=&quot;kgvid_below_video&quot; id=&quot;video_kgvid_2_below&quot;&gt;&lt;div class=&quot;kgvid-caption&quot; id=&quot;video_kgvid_2_caption&quot;&gt;Depth Metadata&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:none;&quot; id=&quot;video_kgvid_2_meta&quot; class=&quot;kgvid_video_meta kgvid_video_meta_hover &quot;&gt;&lt;span class=&#039;kgvid_meta_icons&#039;&gt;&lt;/span&gt;&lt;span id=&#039;video_kgvid_2_title&#039; class=&#039;kgvid_title&#039;&gt;Depth Metadata&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" data-kgvid_video_vars="{&quot;id&quot;:&quot;kgvid_2&quot;,&quot;attachment_id&quot;:674,&quot;player_type&quot;:&quot;Video.js&quot;,&quot;width&quot;:&quot;960&quot;,&quot;height&quot;:&quot;563&quot;,&quot;fullwidth&quot;:&quot;false&quot;,&quot;countable&quot;:true,&quot;count_views&quot;:&quot;quarters&quot;,&quot;start&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pauseothervideos&quot;:&quot;false&quot;,&quot;set_volume&quot;:&quot;1&quot;,&quot;mute&quot;:&quot;false&quot;,&quot;meta&quot;:true,&quot;endofvideooverlay&quot;:&quot;&quot;,&quot;resize&quot;:&quot;true&quot;,&quot;auto_res&quot;:&quot;automatic&quot;,&quot;pixel_ratio&quot;:&quot;true&quot;,&quot;right_click&quot;:&quot;on&quot;,&quot;playback_rate&quot;:&quot;false&quot;,&quot;nativecontrolsfortouch&quot;:&quot;true&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;enable_resolutions_plugin&quot;:false}" " style="max-width:370px">
+                      <img src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/depthMeta_thumb.jpg" alt="Depth Metadata">
+                      <div class="kg-video-js-skin" >
+                        <div class="vjs-big-play-button" style="-webkit-transform: scale(0.62) translateY(-30px); -o-transform: scale(0.62) translateY(-30px); -ms-transform: scale(0.62) translateY(-30px); transform: scale(0.62) translateY(-30px);">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="titlebackground">
+                        <div class="videotitle">Depth Metadata</div>
+                      </div>
+                    </div>
+
+                    <div class="kgvid_video_gallery_thumb" onclick="kgvid_SetVideo('kgvid_3')" id="kgvid_video_gallery_thumb_kgvid_3" data-id="kgvid_3" data-width="960" data-height="459" data-meta="1" data-gallery_end="" data-popupcode="&lt;div id=&quot;kgvid_kgvid_3_wrapper&quot; class=&quot;kgvid_wrapper&quot;&gt;&lt;div id=&quot;video_kgvid_3_div&quot; class=&quot;fitvidsignore kgvid_videodiv&quot; data-id=&quot;kgvid_3&quot; itemprop=&quot;video&quot; itemscope itemtype=&quot;https://schema.org/VideoObject&quot;&gt;&lt;meta itemprop=&quot;thumbnailUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/gpsMotionMeta_thumb.jpg&quot; /&gt;&lt;meta itemprop=&quot;embedUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/?attachment_id=676&amp;kgvid_video_embed[enable]=true&quot; /&gt;&lt;meta itemprop=&quot;contentUrl&quot; content=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/gpsMotionMeta.mp4&quot; /&gt;&lt;meta itemprop=&quot;name&quot; content=&quot;Video and GPS meta data&quot; /&gt;&lt;meta itemprop=&quot;description&quot; content=&quot;For each annotated frame, there are 20 preceding and 10 trailing video frames available. In addition, we provide the positions of the vehicle&#039;s GPS sensor.Note that the images in this video are blurred for privacy reasons.&quot; /&gt;&lt;meta itemprop=&quot;uploadDate&quot; content=&quot;2016-02-21T10:49:14+00:00&quot; /&gt;&lt;video id=&quot;video_kgvid_3&quot; autoplay controls preload=&quot;metadata&quot; poster=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/gpsMotionMeta_thumb.jpg&quot; width=&quot;960&quot; height=&quot;459&quot; class=&quot;fitvidsignore video-js kg-video-js-skin&quot;&gt;&lt;source src=&quot;https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/videos/gpsMotionMeta.mp4?id=3&quot; type=&quot;video/mp4&quot; data-res=&quot;490p&quot;&gt;&lt;/video&gt;&lt;/div&gt;&lt;div class=&quot;kgvid_below_video&quot; id=&quot;video_kgvid_3_below&quot;&gt;&lt;div class=&quot;kgvid-caption&quot; id=&quot;video_kgvid_3_caption&quot;&gt;Video and GPS meta data&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:none;&quot; id=&quot;video_kgvid_3_meta&quot; class=&quot;kgvid_video_meta kgvid_video_meta_hover &quot;&gt;&lt;span class=&#039;kgvid_meta_icons&#039;&gt;&lt;/span&gt;&lt;span id=&#039;video_kgvid_3_title&#039; class=&#039;kgvid_title&#039;&gt;Video and GPS meta data&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" data-kgvid_video_vars="{&quot;id&quot;:&quot;kgvid_3&quot;,&quot;attachment_id&quot;:676,&quot;player_type&quot;:&quot;Video.js&quot;,&quot;width&quot;:&quot;960&quot;,&quot;height&quot;:&quot;459&quot;,&quot;fullwidth&quot;:&quot;false&quot;,&quot;countable&quot;:true,&quot;count_views&quot;:&quot;quarters&quot;,&quot;start&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pauseothervideos&quot;:&quot;false&quot;,&quot;set_volume&quot;:&quot;1&quot;,&quot;mute&quot;:&quot;false&quot;,&quot;meta&quot;:true,&quot;endofvideooverlay&quot;:&quot;&quot;,&quot;resize&quot;:&quot;true&quot;,&quot;auto_res&quot;:&quot;automatic&quot;,&quot;pixel_ratio&quot;:&quot;true&quot;,&quot;right_click&quot;:&quot;on&quot;,&quot;playback_rate&quot;:&quot;false&quot;,&quot;nativecontrolsfortouch&quot;:&quot;true&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;enable_resolutions_plugin&quot;:false}" " style="max-width:370px">
+                      <img src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2016/02/gpsMotionMeta_thumb.jpg" alt="Video and GPS meta data">
+                      <div class="kg-video-js-skin" >
+                        <div class="vjs-big-play-button" style="-webkit-transform: scale(0.62) translateY(-30px); -o-transform: scale(0.62) translateY(-30px); -ms-transform: scale(0.62) translateY(-30px); transform: scale(0.62) translateY(-30px);">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="titlebackground">
+                        <div class="videotitle">Video and GPS meta data</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </article>
+
+            </div><!--.article-container -->
+          </div><!--.row -->
+        </div><!-- .container role: main -->
+
+      </div><!-- //#main-wrapper -->
+
+<!--   ############################### FOOTER START ###################################################################   -->
+
+  	 <!-- FOOTER -->
+  	 <footer id="footer" class="">
+  	   <div class="container footer-widgets ">
+         <div class="row widget-area" role="complementary">
+
+         </div><!-- .row.widget-area -->
+			 </div><!--.footer-widgets -->
+
+       <div class="colophon">
+			 	<div class="container">
+			 		<div class="row-fluid">
+					    <div class="span3 social-block pull-left"></div>
+              <div class="span6 credits">
+                <p style="font-size: 10pt;" > &copy; BigRedLiDAR <script>document.write(new Date().getFullYear())</script> | All Right Reserved </p>
+              </div>
+          </div><!-- .row-fluid -->
+	      </div><!-- .container -->
+	     </div><!-- .colophon -->
+     </footer>
+
+   </div><!-- //#tc-page-wrapper -->
+
+   <script type='text/javascript'>
+      var colomatduration = 'fast';
+      var colomatslideEffect = 'slideFade';
+      var colomatpauseInit = '';
+      var colomattouchstart = '';
+   </script>
+
+   <script type='text/javascript' src='scripts/tool_tips.js'></script>
+   <script type='text/javascript' src='scripts/collapse_omatic.js'></script>
+   <script type='text/javascript' src='scripts/comment.js'></script>
+   <script type='text/javascript' src='scripts/ui_core.js'></script>
+   <script type='text/javascript' src='scripts/ui_effect.js'></script>
+   <script type='text/javascript' src='scripts/embed.js'></script>
+   <script type='text/javascript' src='scripts/video.js'></script>
+   <script type='text/javascript' src='scripts/video_selector.js'></script>
+   <script type='text/javascript' src='scripts/video_embed.js'></script>
+   <script type='text/javascript' src='scripts/simple_modal.js'></script>
+
+   <script type="text/javascript">
+      jQuery(function() {
+        jQuery(".tooltips img").closest(".tooltips").css("display", "inline-block");
+        new jQuery.Zebra_Tooltips(jQuery('.tooltips').not('.custom_m_bubble'), {
+            'background_color':     '#000000',
+            'color':				'#ffffff',
+            'max_width':  500,
+            'opacity':    .8,
+            'position':    'center'
+            });
+      });
+   </script>
+
+	 <div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div>
+ </body>
+</html>

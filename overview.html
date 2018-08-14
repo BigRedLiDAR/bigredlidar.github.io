@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+
+  <head>
+	   <meta charset="UTF-8" />
+		 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		 <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+		 <!-- html5shiv for IE8 and less  -->
+		 <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+     <title>BigRedLiDAR | Indoor Cloud Point Dataset</title>
+
+     <link rel='stylesheet' id='papercite_css-css'  href='styles/paper_cite.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='simple_tooltips_style-css'  href='styles/tool_tips.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='collapseomatic-css-css'  href='styles/collapse_omatic.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='local-fonts-css'  href='styles/local_font.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='tablepress-columnfilterwidgets-css-css'  href='styles/column_filter.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='tablepress-default-css'  href='styles/table_press.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='datatables-row-details-css'  href='styles/data_table.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='circles-gallery-plugin-styles-css'  href='styles/circles_gallery.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-fa-css'  href='styles/fa.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-common-css'  href='styles/common.css' type='text/css' media='all' />
+     <link rel='stylesheet' id='customizr-skin-css'  href='styles/skin.css' type='text/css' media='all' />
+
+     <style id='customizr-skin-inline-css' type='text/css'>
+        .site-title,.site-description,h1,h2,h3,.tc-dropcap {
+          font-family : 'Georgia','Georgia','serif';
+          font-weight : inherit;
+          }
+
+        body,.navbar .nav>li>a {
+          font-family : 'Verdana','Geneva','sans-serif';
+          font-weight : inherit;
+          }
+
+        body,.navbar .nav>li>a {
+          font-size : 18px;
+          line-height : 1.6em;
+          }
+
+        table { border-collapse: separate; }
+
+        body table { border-collapse: collapse; }
+
+        .social-links .social-icon:before { content: none }
+
+        .sticky-enabled .tc-shrink-on .site-logo img {
+          height:30px!important;
+          width:auto!important
+          }
+
+        .sticky-enabled .tc-shrink-on .brand .site-title {
+          font-size:0.6em;
+          opacity:0.8;
+          line-height:1.2em
+          }
+      </style>
+
+      <link rel='stylesheet' id='customizr-style-css'  href='styles/style.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='fancyboxcss-css'  href='styles/fancy_box.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tablepress-datatables-buttons-css'  href='styles/table_buttons.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tablepress-responsive-tables-css'  href='styles/table.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='video-js-css'  href='styles/video.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='video-js-kg-skin-css'  href='styles/video_skin.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='dashicons-css'  href='styles/dash_icons.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='kgvid_video_styles-css'  href='styles/video_styles.css' type='text/css' media='all' />
+      <!--[if !IE]><!-->
+        <link rel='stylesheet' id='tablepress-responsive-tables-flip-css'  href='styles/table_flip.css' type='text/css' media='all' />
+      <!--<![endif]-->
+
+      <script type='text/javascript' src='scripts/jquery_js.js'></script>
+      <script type='text/javascript' src='scripts/jquery_migrate.js'></script>
+      <script type='text/javascript' src='scripts/paper_cite.js'></script>
+      <script type='text/javascript' src='scripts/circle_gallery.js'></script>
+      <script type='text/javascript' src='scripts/modernizr.js'></script>
+      <script type='text/javascript' src='scripts/fancy_box.js'></script>
+
+      <!--<script type='text/javascript'>
+      /* <![CDATA[ */
+        var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"1","SliderName":"examples","SliderDelay":"3210","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"easeOutExpo","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"1","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"1","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"https:\/\/www.cityscapes-dataset.com\/wordpress\/wp-admin\/admin-ajax.php","ajaxUrl":"https:\/\/www.cityscapes-dataset.com\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"4eeafeaa3b"},"isDevMode":"","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"https:\/\/www.cityscapes-dataset.com\/wordpress\/wp-admin\/admin-ajax.php"}}};
+      /* ]]> */
+    </script>-->
+
+      <script type='text/javascript' src='scripts/tc_scripts.js'></script>
+      <meta name="generator" content="WordPress 4.9.6" />
+      <link rel="canonical" href="https://bigredlidar.github.io/" />
+      <link rel='shortlink' href='https://bigredlidar.github.io/' />
+      <link rel="icon" href="images/bigred.png" sizes="192x192" />
+      <link rel="apple-touch-icon-precomposed" href="images/bigred.png" />
+	</head>
+
+	<body class="home page-template page-template-custom-page page-template-custom-page-php page page-id-27 tc-fade-hover-links tc-no-sidebar tc-center-images skin-blue tc-sticky-header sticky-disabled tc-transparent-on-scroll no-navbar tc-regular-menu" >
+
+    <div id="tc-page-wrap" class="">
+
+  	   	<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on  tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile" role="banner">
+
+        <div class="brand span3 pull-left">
+          <a class="site-logo" href="https://bigredlidar.github.io/" title="">
+          <img src="images/lidar_logo.png" alt="Back Home" width="1999" height="369" style="max-width:250px;max-height:100px" data-no-retina class=" attachment-289"/>
+          </a>
+        </div> <!-- brand span3 -->
+
+        <div class="container outside">
+          <h2 class="site-description">Semantic Understanding of Indoor Cloud Point</h2>
+        </div>
+
+        <div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-right">
+        	<div class="navbar resp">
+          		<div class="navbar-inner" role="navigation">
+            		<div class="row-fluid">
+
+              		<h2 class="span7 inside site-description">Semantic Understanding of Indoor Cloud Point</h2>
+
+                  <div class="nav-collapse collapse tc-hover-menu-wrapper">
+                    <div class="menu-main-menu-container">
+                      <ul id="menu-main-menu-2" class="nav tc-hover-menu">
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-788">
+                          <a href="overview.html">Overview</a>
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-57">
+                          <a href="examples.html">Examples</a>
+                          <!--<ul class="dropdown-menu">
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119">
+                               <a href="https://www.cityscapes-dataset.com/examples/#fine-annotations">Fine Annotations</a></li>
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-346"><a href="https://www.cityscapes-dataset.com/examples/#coarse-annotations">Coarse Annotations</a></li>
+	                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-682"><a href="https://www.cityscapes-dataset.com/examples/#videos">Videos</a></li>
+                          </ul>-->
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479">
+                          <a href="download.html">Download</a>
+                        </li>
+
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131">
+                          <a href="contact.html">Contact</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-toggle-nav pull-right">
+                    <button type="button" class="btn menu-btn" data-toggle="collapse" data-target=".nav-collapse" title="Open the menu" aria-label="Open the menu">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+
+                </div><!-- /.row-fluid -->
+          		</div><!-- /.navbar-inner -->
+        	</div><!-- /.navbar resp -->
+      	</div><!-- /.navbar-wrapper -->
+    	  </header>
+
+<!--   ############################### HEADER END ###################################################################   -->
+
+        <div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div>
+          <div id="main-wrapper" class="container">
+
+            <div class="tc-hot-crumble container" role="navigation">
+              <div class="row">
+                <div class="span12">
+                  <div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+                    <span class="trail-begin">
+                      <a href="index.html" title="BigRedLiDAR Dataset" rel="home" class="trail-begin">Home</a>
+                    </span>
+                    <span class="sep">&raquo;</span>
+                    <span class="trail-end">Dataset Overview</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container" role="main">
+              <div class="row column-content-wrapper">
+                <div id="content" class="span12 article-container tc-gallery-style">
+                  <article id="page-34" class="row-fluid post-34 page type-page status-publish has-post-thumbnail">
+                    <header class="entry-header">
+                      <h1 class="entry-title ">Dataset Overview</h1>
+                      <hr class="featurette-divider __before_content">
+                    </header>
+
+                    <div class="entry-content">
+                      <p>The BigRedLiDAR Dataset focuses on semantic understanding of urban street scenes. In the following, we give an overview on the design choices that were made to target the dataset&#8217;s focus.</p>
+                      <p>&nbsp;</p>
+                      <h2 id="features" class="offset">Features</h2>
+                      <div class="row-fluid">
+                        <div class="span8">
+                          <p>Type of annotations</p>
+                          <ul>
+                            <li>Semantic</li>
+                            <li>Instance-wise</li>
+                            <li>Dense pixel annotations</li>
+                          </ul>
+                          <p>Complexity</p>
+                          <ul>
+                            <li>30 classes</li>
+                            <li>See <a href="#class-definitions">Class Definitions</a> for a list of all classes and have a look at the applied <a href="#labeling-policy">Labeling Policy</a>.</li>
+                          </ul>
+                          <p>Diversity</p>
+                          <ul>
+                            <li>50 cities</li>
+                            <li>Several months (spring, summer, fall)</li>
+                            <li>Daytime</li>
+                            <li>Good/medium weather conditions</li>
+                            <li>Manually selected frames
+                              <ul>
+                                <li>Large number of dynamic objects</li>
+                                <li>Varying scene layout</li>
+                                <li>Varying background</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <p>Volume</p>
+                          <ul>
+                            <li>5 000 annotated images with fine annotations (<a href="https://www.cityscapes-dataset.com/examples/#fine-annotations">examples</a>)</li>
+                            <li>20 000 annotated images with coarse annotations (<a href="https://www.cityscapes-dataset.com/examples/#coarse-annotations">examples</a>)</li>
+                          </ul>
+                          <p>Metadata</p>
+                          <ul>
+                            <li>Preceding and trailing video frames. Each annotated image is the 20<sup>th</sup> image from a 30 frame video snippets (1.8s)</li>
+                            <li>Corresponding right stereo views</li>
+                            <li>GPS coordinates</li>
+                            <li>Ego-motion data from vehicle odometry</li>
+                            <li>Outside temperature from vehicle sensor</li>
+                          </ul>
+                          <p>Benchmark suite and evaluation server</p>
+                          <ul>
+                            <li>Pixel-level semantic labeling</li>
+                            <li>Instance-level semantic labeling</li>
+                          </ul>
+                        </div>
+                        <div class="span4">
+                          <h3>Type of annotations</h3>
+                          <p>
+                            <a href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00.png"class="grouped_elements" rel="tc-fancybox-group34">
+                              <img class="alignleft wp-image-77 size-medium" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png" alt="Annotation example" width="100%" srcset="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-300x149.png 300w, https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2015/07/muenster00-1024x510.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+                            </a>
+                          </p>
+                          <h3>Contained cities</h3>
+                          <p>
+                            <a href="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2018/05/cityscapesCities.jpg"class="grouped_elements" rel="tc-fancybox-group34">
+                              <img class="alignleft size-medium" src="https://www.cityscapes-dataset.com/wordpress/wp-content/uploads/2018/05/cityscapesCities-768x998.jpg" alt="Contained cities" width="100%" />
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                      <p>&nbsp;</p>
+
+                      <h2 id="labeling-policy" class="offset">Labeling Policy</h2>
+                      <p>Labeled foreground objects must never have holes, i.e. if there is some background visible &#8216;through&#8217; some foreground object, it is considered to be part of the foreground. This also applies to regions that are highly mixed with two or more classes: they are labeled with the foreground class. Examples: tree leaves in front of house or sky (everything tree), transparent car windows (everything car).</p>
+                      <p>&nbsp;</p>
+                      <h2 id="class-definitions" class="offset">Class Definitions</h2>
+                      <p>Please click on the individual classes for details on their definitions.</p>
+
+                      <table id="tablepress-1" class="tablepress tablepress-id-1">
+                        <thead>
+                          <tr class="row-1 odd">
+                            <th class="column-1">Group</th><th class="column-2">Classes</th>
+                          </tr>
+                        </thead>
+                        <tbody class="row-hover">
+                          <tr class="row-2 even">
+                            <td class="column-1">flat</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Part of ground on which cars usually drive, i.e. all lanes, all directions, all streets. Including the markings on the road. Areas only delimited by markings from the main road (no texture change) are also road, e.g. bicycle lanes, roundabout lanes, or parking spaces. This label does not include curbs.">road</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Part of ground designated for pedestrians or cyclists. Delimited from the road by some obstacle, e.g. curbs or poles (might be small), not only by markings. Often elevated compared to the road. Often located at the sides of a road. This label includes a possibly delimiting curb, traffic islands (the walkable part), or pedestrian zones (where usually cars are not allowed to drive during day-time).">sidewalk</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Parking lots and driveways. Not for regular driving, but rather to park a vehicle. Different texture than road. In ambiguous cases where the driveway is not separated from the sidewalk (e.g. a building entrance), labeled as sidewalk.">parking<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="All kind of rail tracks that are non-drivable by cars, e.g. subway and train rail tracks, while tram rail tracks are usually drivable by cars and therefore part of &lt;em&gt;road&lt;/em&gt;.">rail track<sup>+</sup></span>
+                            </td>
+                          </tr>
+                          <tr class="row-3 odd">
+                            <td class="column-1">human</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="A human that satisfies the following criterion. Assume the human moved a distance of 1m and stopped again. If the human would walk, the label is person, otherwise not. Examples are people walking, standing or sitting on the ground, on a bench, on a chair. This class also includes toddlers, someone pushing a bicycle or standing next to it with both legs on the same side of the bicycle. This class includes anything that is carried by the person, e.g. backpack, but not items touching the ground, e.g. trolleys.">person<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="A human that would use some device to move a distance of 1m. Includes, riders/drivers of bicycle, motorbike, scooter, skateboards, horses, roller-blades, wheel-chairs, road cleaning cars, cars without roof. Note that a visible driver of a car with roof can only be seen through the window. Since holes are not labeled, the human is included in the car label.">rider<sup>*</sup></span>
+                              <br />
+                            </td>
+                          </tr>
+                          <tr class="row-4 even">
+                            <td class="column-1">vehicle</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Car, jeep, SUV, van with continuous body shape, caravan, no other trailers.">car<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Truck, box truck, pickup truck. Including their trailers. Back part / loading area is physically separated from driving compartment.">truck<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Bus for 9+ persons, public transport or long distance transport.">bus<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Vehicle on rails, e.g. tram, train.">on rails<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Motorbike, moped, scooter without the driver (that's a &lt;em&gt;rider&lt;/em&gt;, see above).">motorcycle<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Bicycle without the driver (that's a &lt;em&gt;rider&lt;/em&gt;, see above).">bicycle<sup>*</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Like truck, but back is primarily for living/sleeping. Including caravan trailers.">caravan<sup>*+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Trailers typically pulled by cars. Note that truck trailers are labeled &lt;em&gt;truck&lt;/em&gt;, caravan trailers &lt;em&gt;caravan&lt;/em&gt;, bicycle or horse trailers &lt;em&gt;dynamic&lt;/em&gt;.">trailer<sup>*+</sup></span>
+                            </td>
+                          </tr>
+                          <tr class="row-5 odd">
+                            <td class="column-1">construction</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Building, skyscraper, house, bus stop building, garage, car port. If a building has a glass wall that you can see through, the wall is still building. Includes scaffolding attached to buildings.">building</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Individual standing wall. Not part of a building.">wall</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Fence including any holes.">fence</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="All types of guard rails/crash barriers.">guard rail<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Bridge. Only the bridge. Fences, people or vehicles on top are labeled separately.">bridge<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Tunnel wall and 'the dark'. No vehicles.">tunnel<sup>+</sup></span>
+                            </td>
+                          </tr>
+                          <tr class="row-6 even">
+                            <td class="column-1">object</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Small mainly vertically oriented pole. E.g. sign pole, traffic light poles. If the pole has a horizontal part (often for traffic light poles) this part is also considered pole. If there are things mounted at the pole that are neither &lt;em&gt;traffic light&lt;/em&gt; nor &lt;em&gt;traffic sign&lt;/em&gt; (e.g. street lights) and that have a diameter (in pixels) of at most twice the diameter of the pole, then these things might also be labeled pole. If they are larger, they are labeled &lt;em&gt;static&lt;/em&gt;.">pole</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Multiple poles that are cumbersome to label individually. This label is ok to use, if the gap between two poles has at most as many pixels width as a single pole.">pole group<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Sign installed from the state/city authority, usually for information of the driver/cyclist/pedestrian in an everyday traffic scene, e.g. traffic- signs, parking signs, direction signs - without their poles. No ads/commercial signs. Only the front side of a sign containing the information. The back side is &lt;em&gt;static&lt;/em&gt;. Note that commercial signs attached to buildings become &lt;em&gt;building&lt;/em&gt;, attached to poles or standing on their own become &lt;em&gt;static&lt;/em&gt;.">traffic sign</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="The traffic light box without its poles.">traffic light</span>
+                            </td>
+                          </tr>
+                          <tr class="row-7 odd">
+                            <td class="column-1">nature</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Tree, hedge, all kinds of vertical vegetation. Plants attached to buildings are usually not annotated separately and labeled &lt;em&gt;building&lt;/em&gt; as well. If growing at the side of a wall or building, marked as vegetation if it covers a substantial part of the surface (more than 20%).">vegetation</span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Grass, all kinds of horizontal vegetation, soil or sand. These areas are not meant to be driven on. This label includes a possibly delimiting curb. Single grass stalks do not need to be annotated and get the label of the region they are growing on.">terrain</span>
+                            </td>
+                          </tr>
+                          <tr class="row-8 even">
+                            <td class="column-1">sky</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="Open sky, without leaves of tree. Includes thin electrical wires in front of the sky.">sky</span>
+                            </td>
+                          </tr>
+                          <tr class="row-9 odd">
+                            <td class="column-1">void</td>
+                            <td class="column-2">
+                              <span class="tooltips " style="color:#B31B1B;" title="All other forms of horizontal ground-level structures that do not match any of the above. For example areas that cars and pedestrians share all-day, roundabouts that are flat but delimited from the road by a curb, elevated parts of traffic islands, water. Void label for &lt;em&gt;flat&lt;/em&gt; areas.">ground<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Things that might not be there anymore the next day/hour/minute: Movable trash bin, buggy, bag, wheelchair, animal.">dynamic<sup>+</sup></span> &middot;
+                              <span class="tooltips " style="color:#B31B1B;" title="Clutter in the background that is not distinguishable. Objects that do not match any of the above. For example, visible parts of the ego vehicle, mountains, street lights, back side of signs. Also rather small regions in the image that are some of the classes above, but that are cumbersome to label precisely might be annotated &lt;em&gt;static&lt;/em&gt;.">static<sup>+</sup></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- #tablepress-1 from cache -->
+                      <ul class="footnote">
+                        <li>* Single instance annotations are available. However, if the boundary between such instances cannot be clearly seen, the whole crowd/group is labeled together and annotated as group, e.g. car group.</li>
+                        <li>+ This label is not included in any evaluation and treated as void (or in the case of <em>license plate</em> as the vehicle mounted on).</li>
+                      </ul>
+
+                    </div>
+
+                  </article>
+                </div><!--.article-container -->
+              </div><!--.row -->
+            </div><!-- .container role: main -->
+          </div><!-- //#main-wrapper -->
+
+<!--   ############################### FOOTER START ###################################################################   -->
+
+  	 <!-- FOOTER -->
+  	 <footer id="footer" class="">
+  	   <div class="container footer-widgets ">
+         <div class="row widget-area" role="complementary">
+
+         </div><!-- .row.widget-area -->
+			 </div><!--.footer-widgets -->
+
+       <div class="colophon">
+			 	<div class="container">
+			 		<div class="row-fluid">
+					    <div class="span3 social-block pull-left"></div>
+              <div class="span6 credits">
+                <p style="font-size: 10pt;" > &copy; BigRedLiDAR <script>document.write(new Date().getFullYear())</script> | All Right Reserved </p>
+              </div>
+          </div><!-- .row-fluid -->
+	      </div><!-- .container -->
+	     </div><!-- .colophon -->
+     </footer>
+
+   </div><!-- //#tc-page-wrapper -->
+
+   <script type='text/javascript'>
+      var colomatduration = 'fast';
+      var colomatslideEffect = 'slideFade';
+      var colomatpauseInit = '';
+      var colomattouchstart = '';
+   </script>
+
+   <script type='text/javascript' src='scripts/tool_tips.js'></script>
+   <script type='text/javascript' src='scripts/collapse_omatic.js'></script>
+   <script type='text/javascript' src='scripts/comment.js'></script>
+   <script type='text/javascript' src='scripts/ui_core.js'></script>
+   <script type='text/javascript' src='scripts/ui_effect.js'></script>
+   <script type='text/javascript' src='scripts/embed.js'></script>
+
+   <script type="text/javascript">
+      jQuery(function() {
+        jQuery(".tooltips img").closest(".tooltips").css("display", "inline-block");
+        new jQuery.Zebra_Tooltips(jQuery('.tooltips').not('.custom_m_bubble'), {
+            'background_color':     '#000000',
+            'color':				'#ffffff',
+            'max_width':  500,
+            'opacity':    .8,
+            'position':    'center'
+            });
+      });
+   </script>
+
+	 <div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div>
+ </body>
+</html>
