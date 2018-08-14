@@ -1,0 +1,242 @@
+/* Your awesome customization starts here */
+
+
+
+/*********************************************************/
+
+/* Grid type used in contact to show the involved groups */
+
+/*********************************************************/
+
+
+
+/* Regular grid */
+
+.city-lab-grid [class*="span"] {
+
+  background-color: #eee;
+
+  text-align: center;
+
+  -webkit-border-radius: 3px;
+
+     -moz-border-radius: 3px;
+
+          border-radius: 3px;
+
+  min-height: 20px;
+
+  line-height: 20px;
+
+  border: 2px solid #ccc;
+
+  margin-top: 0px;
+
+  margin-bottom: 20px;
+
+  position:relative;
+
+}
+
+/* Mouse hove */
+
+.city-lab-grid [class*="span"]:hover {
+
+  background-color: #ddd;
+
+}
+
+/* No idea */
+
+.city-lab-grid [class*="span"] [class*="span"] {
+
+  background-color: #ccc;
+
+}
+
+/* Do not change the color when linked */
+
+.city-lab-grid [class*="span"]:link {
+
+    color:inherit;
+
+}
+
+/* Anchor type, a hack to allow the whole thing to be a link */
+
+.city-lab-grid [class*="span"] a {
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+
+    z-index:10; /* raises anchor tag above everything else in div */
+
+    background-color:white; /*workaround to make clickable in IE */
+
+    opacity: 0; /*workaround to make clickable in IE */
+
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+
+}
+
+/* Title line */
+
+.city-lab-title {
+
+  font-weight: 600;
+
+  font-size: 1.3em;
+
+  line-height: 1.5em;
+
+  margin-top: 1.5em;
+
+}
+
+
+
+/* Style for footnote list. Makes the first letter to be the bullet point,
+
+ * used for the class definitions footnotes                                */
+
+ul.footnote {
+
+  list-style: none;
+
+  margin-left: 0;
+
+  padding-left: 2em;
+
+  text-indent: -1em;
+
+}
+
+
+
+/* Use the class offset for heading that you give an id="..." for page anchors
+
+   When you reference this anchor, the page header is taken into account    */
+
+.offset:before {
+
+    display: block;
+
+    content: " ";
+
+    height: 53px;      /* Give height of your fixed element */
+
+    margin-top: -53px; /* Give negative margin of your fixed element */
+
+    visibility: hidden;
+
+}
+
+
+
+/* Fixes for navbar with page anchors */
+
+.dropdown-menu > li.current-menu-item > a {
+
+  color: inherit;
+
+  background-color: inherit;
+
+}
+
+.dropdown-menu > li.current-menu-item > a:hover {
+
+  color: #0088cc;
+
+}
+
+
+
+/* For footnotes with legal stuff */
+
+.legal {
+
+    font-size: 0.7em;
+
+}
+
+/* START OF Change the Footer Widget Area */
+/* Center the widget text areas */
+footer#footer       {
+text-align:     center ;
+}
+
+/* Or left-center-right the widget text areas */
+#footer_one {
+text-align:     left ;
+}
+#footer_two {
+text-align:     center ;
+}
+#footer_three {
+text-align:     right ;
+}
+/* END OF Change the Footer Widget Area */
+
+
+/* Submission form */
+.cssubmission {
+  clear: none;
+}
+
+.cssubmission label {
+  clear: none;
+  display: block;
+  padding: 2px 1em 0 0;
+  font-size: inherit;
+}
+
+.cssubmission input[type=radio],
+.cssubmission input.radio {
+  clear: none;
+  margin: 2px 0 0 2px;
+  line-height: inherit;
+}
+
+.cssubmission legend {
+  font-weight: bold
+}
+
+/* My submissions page */
+.csmysubmissions {
+}
+
+.csmysubmissions table {
+    table-layout: auto;
+    width: auto;
+}
+
+.csmysubmissions th, td {
+    text-align: left;
+    padding: 6px 10px 6px 6px;
+}
+
+/* Method details */
+
+.csmethoddetails td:nth-child(1){
+    white-space: nowrap;
+}
+
+/* Fonts */
+.site-title,.site-description,h1,h2,h3,.tc-dropcap {
+    font-family : 'Fjalla One';
+    font-weight : 400;
+}
+
+body,.navbar .nav>li>a {
+    font-family : 'Cantarell';
+    font-weight : 400;
+}
